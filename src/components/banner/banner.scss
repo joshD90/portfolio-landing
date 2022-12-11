@@ -1,0 +1,48 @@
+.bannerContainer {
+  background-image: linear-gradient(#ffff00 40%, #fafa71 80%, white 99%);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.contentHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: gray;
+  font-family: sans-serif;
+  height: 100%;
+  margin-left: 10%;
+  z-index: 1;
+  h2 {
+    margin: 0.2rem 0;
+    font-size: 2rem;
+  }
+  p {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    color: rgb(101, 100, 100);
+    font-weight: 600;
+  }
+}
+.imgHolder {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  display: flex;
+  align-items: flex-end;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  img {
+    width: 120%;
+  }
+}

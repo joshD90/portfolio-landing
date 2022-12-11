@@ -1,0 +1,23 @@
+$textColor: rgb(66, 65, 65);
+
+.aboutContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-family: sans-serif;
+  p {
+    width: 40%;
+    text-align: center;
+    line-height: 2rem;
+    color: $textColor;
+    margin-top: 3rem;
+    @media (max-width: 768px) {
+      width: 70%;
+    }
+    @media (max-width: 480px) {
+      width: 90%;
+    }
+  }
+}

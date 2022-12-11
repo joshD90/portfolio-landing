@@ -1,0 +1,76 @@
+$textColor: #210121;
+.skillCardDiv {
+  border-radius: 0.4rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 0 3px 1px #cf5ecf;
+  margin: 2rem 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  width: 30%;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.05);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.25),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  &:hover::after {
+    left: 100%;
+  }
+  &:hover {
+    transition: 0.5s ease;
+    transform: rotateX(-2deg) rotateY(-6deg) rotateZ(0deg);
+  }
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+  @media (max-width: 480px) {
+    width: 90%;
+  }
+
+  .skillHeader {
+    background-color: rgba(77, 2, 77, 0.6);
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .skillList {
+    height: 100%;
+    width: 100%;
+    ul {
+      color: $textColor;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+
+      li {
+        width: 100%;
+        line-height: 1.5rem;
+        font-size: 1.5;
+        text-align: center;
+      }
+    }
+  }
+}

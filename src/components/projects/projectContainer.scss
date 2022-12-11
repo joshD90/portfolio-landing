@@ -1,0 +1,18 @@
+$backgroundColor: #ffff00;
+$textColor: #4c3d4c;
+.projectContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-image: linear-gradient(white, #f8f870 70%, $backgroundColor);
+  min-height: 200px;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  span {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-size: 2rem;
+    color: $textColor;
+  }
+}
