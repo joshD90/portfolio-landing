@@ -1,12 +1,33 @@
 $textColor: #4c3d4c;
 
-.container {
+.wrapper {
   width: 25%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 5rem;
+  transition: height 2s, box-shadow 2s, transform 2s;
+  box-shadow: 0 0 3px 1px #cf5ecf;
+  border-radius: 5px;
+  &:hover {
+    height: 600px;
+    box-shadow: none;
+    transform: scale(1.05);
+    transition: height 2s, box-shadow 0.2s, transform 2s;
+  }
+  @media (max-width: 768px) {
+    width: 45%;
+  }
+  @media (max-width: 480px) {
+    width: 90%;
+  }
+}
+.container {
   color: $textColor;
   background-color: white;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 3px 1px #cf5ecf;
+  cursor: pointer;
   .bannerImg {
     width: 100%;
     img {
@@ -24,6 +45,37 @@ $textColor: #4c3d4c;
     }
     span {
       font-size: 1rem;
+    }
+  }
+}
+
+.buttonDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    margin-bottom: 1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dark {
+    background-color: black;
+    color: white;
+    &:hover {
+      background-color: rgb(27, 27, 27);
+    }
+  }
+  .light {
+    background-color: lightgray;
+    color: rgb(48, 48, 48);
+    &:hover {
+      background-color: rgb(182, 180, 180);
     }
   }
 }

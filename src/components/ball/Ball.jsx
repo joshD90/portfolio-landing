@@ -1,14 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ball.scss";
 import anime from "animejs";
 
 function Ball({ src, bannerRef }) {
   const ballRef = useRef();
+  const [display, setDisplay] = useState("none");
   const width = window.innerWidth;
   const height = window.innerHeight;
 
   useEffect(() => {
     const doAnimate = (e) => {
+      setDisplay("flex");
       anime({
         targets: ".ball",
         translateX: () => [e.clientX, anime.random(-width, width * 1.5)],
@@ -29,7 +31,7 @@ function Ball({ src, bannerRef }) {
   }, []);
 
   return (
-    <div className="ball" ref={ballRef}>
+    <div className="ball" ref={ballRef} style={{ display: display }}>
       <img src={src} />
     </div>
   );
