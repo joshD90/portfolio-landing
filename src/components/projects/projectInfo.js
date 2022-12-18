@@ -10,6 +10,7 @@ export const staticInfo = {
     "The Highlight of this project is the implementation of parralax and the creation of a natural feel to the page to reflect the countryside residence of this Lodge",
   techs: "React, Styled-Components, NginX",
   gitLink: "https://github.com/joshD90/bnw-vintage",
+  siteLink: "https://lodge.joshuadanceywebdev.ie",
 };
 
 export const eCommerceInfo = {
@@ -21,6 +22,7 @@ export const eCommerceInfo = {
   techs:
     "React, Styled-Components, Stripe, Mongoose, MongoDB, Firebase, Passport.js, Express",
   gitLink: "https://github.com/joshD90/leonards-lodge",
+  siteLink: "https://bnw.joshuadanceywebdev.ie",
 };
 
 export const chessProjInfo = {
@@ -31,4 +33,5 @@ export const chessProjInfo = {
     "Application of Complex Logic to implement game rules.  Dynamic room allocation through Socket.io. Includes take functionality, check, checkmate, en-passante, queening, draw-conditions including stalemate",
   techs: "React,Sass,Socket.io,HTMLCanvas",
   gitLink: "https://github.com/joshD90/chess_app",
+  siteLink: "https://chess.joshuadanceywebdev.ie",
 };

@@ -10,12 +10,14 @@ function Ball({ src, bannerRef }) {
 
   useEffect(() => {
     const doAnimate = (e) => {
+      const x = e.type === "touchend" ? e.changedTouches[0].clientX : e.clientX;
+      const y = e.type === "touchend" ? e.changedTouches[0].clientY : e.clientY;
       setDisplay("flex");
       anime({
         targets: ".ball",
-        translateX: () => [e.clientX, anime.random(-width, width * 1.5)],
+        translateX: () => [x, anime.random(-width, width * 1.5)],
         translateY: () => [
-          e.clientY + window.pageYOffset,
+          y + window.pageYOffset,
           anime.random(-height, height * 1.5),
         ],
         scale: () => anime.random(0.1, 1),
@@ -27,7 +29,11 @@ function Ball({ src, bannerRef }) {
     };
 
     bannerRef.current.addEventListener("click", doAnimate);
-    return () => bannerRef.current.removeEventListener("click", doAnimate);
+    bannerRef.current.addEventListener("touchend", doAnimate);
+    return () => {
+      bannerRef.current.removeEventListener("click", doAnimate);
+      bannerRef.current.removeEventListener("touchend", doAnimate);
+    };
   }, []);
 
   return (

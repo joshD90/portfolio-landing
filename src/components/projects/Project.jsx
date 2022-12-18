@@ -26,7 +26,9 @@ function Project({ project }) {
           </p>
         </div>
         <div className="buttonDiv">
-          <button className="light">View Live Project</button>
+          <a href={project.siteLink}>
+            <button className="light">View Live Project</button>
+          </a>
           <a href={project.gitLink}>
             <button className="dark">
               GitHub Code
