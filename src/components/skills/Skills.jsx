@@ -21,15 +21,15 @@ const frontendSkills = [
 ];
 const otherSkills = ["NGinX", "Git", "Github", "VScode", "Heroku", "VPS"];
 
-function Skills() {
+const Skills = React.forwardRef((props, ref) => {
   return (
-    <div className="skillsContainer">
+    <div className="skillsContainer" ref={ref}>
       <span>Skillset</span>
       <SkillCard header="Frontend" skillList={frontendSkills} />
       <SkillCard header="Backend" skillList={backendSkills} />
       <SkillCard header="Other" skillList={otherSkills} />
     </div>
   );
-}
+});
 
 export default Skills;

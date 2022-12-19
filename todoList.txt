@@ -1,0 +1,21 @@
+Portfolio:
+- Add scroll to for navbar
+- Make the navbar disappear if Press on something else
+- look at colorscheme soften up some of the colorscheme
+- look at the text, try and get projects evened out.
+- maybe some view more ... on the project divs
+- add in action buttons to banner
+- add in contact section
+
+Chess:
+- refactor the lot!!
+- look at the information text, even out the player names
+- put text into boundaried boxes
+- do the win as a pop up box which can be cancelled, rematched or seek another game
+- see whether I can change the size of the chess game depending on screen change.  I suspect this is about passing the right dependencies around
+
+BNW:
+- look at stripe redirection
+
+Lodge:
+-boost SEO stuff look into with David

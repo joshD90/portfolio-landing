@@ -56,7 +56,6 @@ $darkPurple: #210121;
     width: 2rem;
     border-radius: 5px;
     padding: 3px;
-    border: 1px solid black;
     cursor: pointer;
     margin-right: 2rem;
     z-index: 5;
@@ -65,10 +64,12 @@ $darkPurple: #210121;
     }
     span {
       border: 2px solid white;
+      background-color: white;
       width: 90%;
     }
     .darkBurgerSpan {
       border: 2px solid #434242;
+      background-color: #434242;
     }
   }
   .dropDownHalf {

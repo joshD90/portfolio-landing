@@ -3,9 +3,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 import "./project.scss";
 
-function Project({ project }) {
+const Project = React.forwardRef(({ project }, ref) => {
   return (
-    <div className="wrapper">
+    <div className="wrapper" ref={ref}>
       <div className="container">
         <div className="bannerImg">
           <img src={project.banner} />
@@ -39,6 +39,6 @@ function Project({ project }) {
       </div>
     </div>
   );
-}
+});
 
 export default Project;

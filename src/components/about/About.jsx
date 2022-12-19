@@ -1,9 +1,9 @@
 import React from "react";
 import "./about.scss";
 
-function About() {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className="aboutContainer">
+    <div className="aboutContainer" ref={ref}>
       <p>
         My Name is Joshua Dancey, an Irish Web Developer. I am a full-stack
         developer with an emphasis on the MERN stack. I love the logic of
@@ -14,6 +14,6 @@ function About() {
       </p>
     </div>
   );
-}
+});
 
 export default About;

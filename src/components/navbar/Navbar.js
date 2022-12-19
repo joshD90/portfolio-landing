@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 
-function Navbar() {
+const Navbar = ({ refs }) => {
   const [opacity, setOpacity] = useState(1);
   const [scrollPos, setScrollPos] = useState(0);
   const [dropped, setDropped] = useState(false);
@@ -45,29 +45,41 @@ function Navbar() {
     }
   };
 
+  const doScroll = (e) => {
+    setTimeout(() => {
+      refs[e.target.id].current.scrollIntoView({ behaviour: "smooth" });
+    }, 1);
+  };
+
   return (
     <div className="navContainer" style={{ opacity: opacity }}>
       <div className="logoDiv">Portfolio</div>
 
       <div className="itemsDiv" style={{ height: itemsHeight }}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li id="home" onClick={doScroll}>
+          Home
+        </li>
+        <li id="about" onClick={doScroll}>
+          About
+        </li>
+        <li id="skills" onClick={doScroll}>
+          Skills
+        </li>
+        <li id="projects" onClick={doScroll}>
+          Projects
+        </li>
+        <li id="contact" onClick={doScroll}>
+          Contact
+        </li>
       </div>
       <div className="dropDownHalf" style={{ height: halfHeight }} />
-      <div
-        className="burgerDiv"
-        onClick={doDrop}
-        style={{ border: dropped ? "1px solid #434242" : "1px solid white" }}
-      >
+      <div className="burgerDiv" onClick={doDrop}>
         <span className={dropped ? "darkBurgerSpan" : ""} />
         <span className={dropped ? "darkBurgerSpan" : ""} />
         <span className={dropped ? "darkBurgerSpan" : ""} />
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

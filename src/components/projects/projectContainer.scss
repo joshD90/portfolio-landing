@@ -1,6 +1,7 @@
 $backgroundColor: #ffff00;
 $textColor: #4c3d4c;
 .projectContainer {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
