@@ -19,14 +19,13 @@ $darkPurple: #210121;
   .itemsDiv {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 100%;
     width: 60%;
     margin-right: 2rem;
-
     @media (max-width: 630px) {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-around;
       align-items: flex-start;
       flex-direction: column;
       position: fixed;
@@ -38,12 +37,65 @@ $darkPurple: #210121;
       color: #434242;
       transition: height 0.5s;
       font-size: 1.5rem;
+      overflow: hidden;
     }
-    li {
-      cursor: pointer;
-      list-style: none;
+    .navItem {
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-right: 3rem;
       @media (max-width: 630px) {
-        margin-bottom: 15%;
+        min-width: 40%;
+        justify-content: flex-start;
+      }
+      .hashLink {
+        text-decoration: none;
+        color: white;
+        @media (max-width: 630px) {
+          color: gray;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          @media (max-width: 630px) {
+            color: gray;
+          }
+        }
+        @media (max-width: 630px) {
+          color: gray;
+        }
+      }
+      .dropDiv {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        background-image: linear-gradient($lightPurple, $darkPurple);
+        position: absolute;
+        top: 3rem;
+        left: -5vw;
+        width: 20vw;
+        color: white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        @media (min-width: 630px) {
+          left: 0;
+          color: gray;
+          display: none;
+          top: 0;
+          left: 100%;
+          &:hover {
+            display: flex;
+          }
+        }
+        .hashLink {
+          margin: 0.5rem 0 1.5rem 10%;
+        }
+      }
+      &:hover .dropDiv {
+        display: flex;
       }
     }
   }

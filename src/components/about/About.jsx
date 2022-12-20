@@ -3,7 +3,7 @@ import "./about.scss";
 
 const About = React.forwardRef((props, ref) => {
   return (
-    <div className="aboutContainer" ref={ref}>
+    <div className="aboutContainer" ref={ref} id="about">
       <p>
         My Name is Joshua Dancey, an Irish Web Developer. I am a full-stack
         developer with an emphasis on the MERN stack. I love the logic of

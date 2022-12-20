@@ -28,11 +28,14 @@ function Ball({ src, bannerRef }) {
       });
     };
 
-    bannerRef.current.addEventListener("click", doAnimate);
-    bannerRef.current.addEventListener("touchend", doAnimate);
+    bannerRef.current && bannerRef.current.addEventListener("click", doAnimate);
+    bannerRef.current &&
+      bannerRef.current.addEventListener("touchend", doAnimate);
     return () => {
-      bannerRef.current.removeEventListener("click", doAnimate);
-      bannerRef.current.removeEventListener("touchend", doAnimate);
+      bannerRef.current &&
+        bannerRef.current.removeEventListener("click", doAnimate);
+      bannerRef.current &&
+        bannerRef.current.removeEventListener("touchend", doAnimate);
     };
   }, []);
 

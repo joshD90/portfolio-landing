@@ -1,9 +1,14 @@
-import Banner from "./components/banner/Banner";
-import About from "./components/about/About";
-import Skills from "./components/skills/Skills";
-import ProjectContainer from "./components/projects/ProjectContainer";
 import Navbar from "./components/navbar/Navbar";
 import React from "react";
+import Home from "./pages/Home";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import ExpandProj from "./components/expandProj/ExpandProj";
 
 function App() {
   const bannerRef = React.createRef();
@@ -19,13 +24,13 @@ function App() {
   };
 
   return (
-    <div>
-      <Navbar refs={refsObject} />
-      <Banner ref={bannerRef} />
-      <About ref={aboutRef} />
-      <Skills ref={skillsRef} />
-      <ProjectContainer ref={projectsRef} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ExpandProj />} />
+      </Routes>
+    </Router>
   );
 }
 

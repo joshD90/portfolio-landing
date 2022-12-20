@@ -8,7 +8,7 @@ const Banner = React.forwardRef((props, ref) => {
   const bannerRef = useRef();
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="banner">
       <div className="bannerContainer" ref={bannerRef}>
         {pngArray.map((png, index) => (
           <Ball src={png} key={index} bannerRef={bannerRef} />

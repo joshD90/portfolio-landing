@@ -8,7 +8,7 @@ import ExpandProj from "../expandProj/ExpandProj";
 
 const ProjectContainer = React.forwardRef((props, ref) => {
   return (
-    <div className="projectContainer" ref={ref}>
+    <div className="projectContainer" ref={ref} id="projects">
       <span>Projects</span>
       <Project project={chessProjInfo} />
       <Project project={staticInfo} />
