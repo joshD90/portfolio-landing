@@ -86,7 +86,11 @@ const Navbar = ({ refs }) => {
             className="hashLink"
             smooth
             to="/#top"
-            onClick={dropped && hideDropped}
+            onClick={() => {
+              if (dropped === true) {
+                hideDropped();
+              }
+            }}
           >
             Main
           </HashLink>
@@ -96,7 +100,11 @@ const Navbar = ({ refs }) => {
               className="hashLink"
               smooth
               to="/#banner"
-              onClick={dropped && hideDropped}
+              onClick={() => {
+                if (dropped === true) {
+                  hideDropped();
+                }
+              }}
             >
               Home
             </HashLink>
@@ -104,7 +112,11 @@ const Navbar = ({ refs }) => {
               className="hashLink"
               smooth
               to="/#about"
-              onClick={dropped && hideDropped}
+              onClick={() => {
+                if (dropped === true) {
+                  hideDropped();
+                }
+              }}
             >
               About
             </HashLink>
@@ -112,7 +124,11 @@ const Navbar = ({ refs }) => {
               className="hashLink"
               smooth
               to="/#skills"
-              onClick={dropped && hideDropped}
+              onClick={() => {
+                if (dropped === true) {
+                  hideDropped();
+                }
+              }}
             >
               Skills
             </HashLink>
@@ -120,11 +136,15 @@ const Navbar = ({ refs }) => {
               className="hashLink"
               smooth
               to="/#projects"
-              onClick={dropped && hideDropped}
+              onClick={() => {
+                if (dropped === true) {
+                  hideDropped();
+                }
+              }}
             >
               Projects
             </HashLink>
-            <a id="contact" onClick={dropped && doScroll}>
+            <a id="contact" onClick={doScroll}>
               Contact
             </a>
           </div>
