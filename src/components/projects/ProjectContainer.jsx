@@ -4,7 +4,6 @@ import Project from "./Project";
 import { staticInfo } from "./projectInfo";
 import { eCommerceInfo } from "./projectInfo";
 import { chessProjInfo } from "./projectInfo";
-import ExpandProj from "../expandProj/ExpandProj";
 
 const ProjectContainer = React.forwardRef((props, ref) => {
   return (
@@ -13,7 +12,6 @@ const ProjectContainer = React.forwardRef((props, ref) => {
       <Project project={chessProjInfo} />
       <Project project={staticInfo} />
       <Project project={eCommerceInfo} />
-      <ExpandProj />
     </div>
   );
 });

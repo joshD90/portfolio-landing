@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import React from "react";
 import Home from "./pages/Home";
+import Footer from "./components/footer/Footer";
 
 import {
   BrowserRouter as Router,
@@ -28,8 +29,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<ExpandProj />} />
+        <Route path="/projects/:name" element={<ExpandProj />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

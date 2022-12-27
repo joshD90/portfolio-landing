@@ -19,6 +19,10 @@ const Banner = React.forwardRef((props, ref) => {
           <h2>A FullStack Web Developer</h2>
           <p>Click anywhere to see some of my skillset</p>
           <p>Scroll down to find out more about me</p>
+          <div className="buttonHolder">
+            <button>Get In Touch</button>
+            <button>See My Projects</button>
+          </div>
         </div>
         <div className="imgHolder">
           <img src={profileCutout} />

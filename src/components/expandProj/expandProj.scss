@@ -16,8 +16,8 @@
   .wrapperWrap {
     width: 70%;
     margin: 3rem;
-    @media (max-width: 480px) {
-      width: 100%;
+    @media (max-width: 780px) {
+      width: 95%;
     }
   }
   .sliderWrapper {
@@ -35,6 +35,7 @@
       width: 100%;
       text-align: center;
       color: gray;
+      margin-top: 3rem;
     }
     .buttonsDiv {
       width: 100%;
@@ -53,12 +54,34 @@
         }
       }
     }
+    .whyDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    p {
+      max-width: 50%;
+      text-align: center;
+      color: rgb(81, 80, 80);
+      @media (max-width: 768px) {
+        width: 80%;
+      }
+    }
+    .whyHr {
+      width: 10%;
+      border: none;
+      border-top: 0.5rem dotted lightgray;
+      margin: 0.5rem 30%;
+    }
     .lists {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       width: 100%;
       margin-top: 3rem;
+      margin-bottom: 2rem;
+      background-image: linear-gradient(#fafa71, white);
       @media (max-width: 480px) {
         flex-direction: column;
       }
@@ -66,7 +89,6 @@
         text-align: center;
         width: 100%;
         height: 3rem;
-        background-color: #fafa71;
         color: gray;
         display: flex;
         align-items: center;
@@ -75,16 +97,20 @@
       }
       .projectLists {
         width: 50%;
-        border: 1px solid gray;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @media (max-width: 480px) {
           width: 100%;
+          height: auto;
         }
+
         li {
           list-style: none;
           margin-top: 0.5rem;
-          margin-left: 1rem;
           color: rgb(97, 96, 96);
+          width: 80%;
         }
       }
     }

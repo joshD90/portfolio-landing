@@ -31,6 +31,24 @@
     color: rgb(101, 100, 100);
     font-weight: 600;
   }
+  button {
+    margin: 4rem 1rem 1rem 0;
+    width: 10rem;
+    height: 4rem;
+    border: 1px solid gray;
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    background-color: lightgray;
+    &:hover {
+      background-color: white;
+    }
+    @media (max-width: 780px) {
+      width: 7rem;
+    }
+  }
 }
 .imgHolder {
   width: 70%;

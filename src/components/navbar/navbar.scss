@@ -119,6 +119,9 @@ $darkPurple: #210121;
       &:hover .dropDiv {
         display: flex;
       }
+      &:active .dropDiv {
+        display: flex;
+      }
     }
   }
   .burgerDiv {

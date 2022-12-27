@@ -82,16 +82,7 @@ const Navbar = ({ refs }) => {
 
       <div className="itemsDiv" style={{ height: itemsHeight }}>
         <div className="navItem">
-          <HashLink
-            className="hashLink"
-            smooth
-            to="/#top"
-            onClick={() => {
-              if (dropped === true) {
-                hideDropped();
-              }
-            }}
-          >
+          <HashLink className="hashLink" smooth to="#">
             Main
           </HashLink>
 
@@ -150,38 +141,31 @@ const Navbar = ({ refs }) => {
           </div>
         </div>
         <div className="navItem">
-          <HashLink
-            className="hashLink"
-            smooth
-            to="/projects"
-            onClick={hideDropped}
-          >
-            Projects
-          </HashLink>
+          <HashLink className="hashLink">Projects</HashLink>
           <div className="dropDiv">
             <HashLink
               className="hashLink"
               smooth
-              to="/projects"
+              to="/projects/chess#top"
               onClick={hideDropped}
             >
-              Project1
+              Chess App
             </HashLink>
             <HashLink
               className="hashLink"
               smooth
-              to="/projects"
+              to="/projects/static#top"
               onClick={hideDropped}
             >
-              Project2
+              Static Design
             </HashLink>
             <HashLink
               className="hashLink"
               smooth
-              to="/projects"
+              to="/projects/e-commerce#top"
               onClick={hideDropped}
             >
-              Project3
+              e-Commerce
             </HashLink>
           </div>
         </div>
