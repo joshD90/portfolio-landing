@@ -24,6 +24,9 @@
   h2 {
     margin: 0.2rem 0;
     font-size: 2rem;
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
   p {
     margin-top: 2rem;
@@ -47,6 +50,10 @@
     }
     @media (max-width: 780px) {
       width: 7rem;
+    }
+    .hashLink {
+      color: black;
+      text-decoration: none;
     }
   }
 }

@@ -3,6 +3,7 @@ import Ball from "../ball/Ball";
 import "./banner.scss";
 import { pngArray } from "../../assets/banner/pngArray";
 import profileCutout from "../../assets/banner/joshNDuncanCutout.png";
+import { HashLink } from "react-router-hash-link";
 
 const Banner = React.forwardRef((props, ref) => {
   const bannerRef = useRef();
@@ -20,8 +21,12 @@ const Banner = React.forwardRef((props, ref) => {
           <p>Click anywhere to see some of my skillset</p>
           <p>Scroll down to find out more about me</p>
           <div className="buttonHolder">
+            <button>
+              <HashLink className="hashLink" smooth to="/#projects">
+                See My Projects
+              </HashLink>
+            </button>
             <button>Get In Touch</button>
-            <button>See My Projects</button>
           </div>
         </div>
         <div className="imgHolder">

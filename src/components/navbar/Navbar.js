@@ -9,7 +9,7 @@ const Navbar = ({ refs }) => {
   const [itemsHeight, setItemsHeight] = useState(0);
   const [halfHeight, setHalfHeight] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [itemsOverflow, setItemsOverflow] = useState();
   useEffect(() => {
     const doWindowScroll = () => {
       if (dropped) return;
@@ -46,12 +46,14 @@ const Navbar = ({ refs }) => {
     setOpacity(0.9);
     setHalfHeight(0);
     setTimeout(() => setItemsHeight("0%"), 200);
+    setTimeout(() => setItemsOverflow("hidden"), 500);
   };
   const showDropped = (e) => {
     setDropped(true);
     setOpacity(1);
     setHalfHeight("100%");
     setTimeout(() => setItemsHeight("100%"), 200);
+    setTimeout(() => setItemsOverflow("visible"), 500);
   };
   const doScroll = (e) => {
     setTimeout(() => {
@@ -65,10 +67,11 @@ const Navbar = ({ refs }) => {
         setDropped(false);
         setHalfHeight(0);
         setItemsHeight("3rem");
+        setItemsOverflow("visible");
       } else {
-        console.log("collapsed");
         if (!dropped) setHalfHeight(0);
         setItemsHeight(dropped ? "100%" : 0);
+        setItemsOverflow(dropped ? "visible" : "hidden");
       }
     };
     window.addEventListener("resize", handleResize);
@@ -79,8 +82,14 @@ const Navbar = ({ refs }) => {
   return (
     <div className="navContainer" style={{ opacity: opacity }}>
       <div className="logoDiv">Portfolio</div>
-
-      <div className="itemsDiv" style={{ height: itemsHeight }}>
+      <div className="dropDownHalf" style={{ height: halfHeight }} />
+      <div
+        className="itemsDiv"
+        style={{
+          height: itemsHeight,
+          overflow: itemsOverflow,
+        }}
+      >
         <div className="navItem">
           <HashLink className="hashLink" smooth to="#">
             Main
@@ -170,7 +179,7 @@ const Navbar = ({ refs }) => {
           </div>
         </div>
       </div>
-      <div className="dropDownHalf" style={{ height: halfHeight }} />
+
       <div className="burgerDiv" onClick={doDrop}>
         <span className={dropped ? "darkBurgerSpan" : ""} />
         <span className={dropped ? "darkBurgerSpan" : ""} />

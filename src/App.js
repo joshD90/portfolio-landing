@@ -2,6 +2,7 @@ import Navbar from "./components/navbar/Navbar";
 import React from "react";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 
 import {
   BrowserRouter as Router,
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/:name" element={<ExpandProj />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
