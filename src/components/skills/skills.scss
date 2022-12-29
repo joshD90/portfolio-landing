@@ -1,3 +1,5 @@
+@use "../colors";
+
 $backgroundColor: #ffff00;
 $textColor: #4c3d4c;
 .skillsContainer {
@@ -8,16 +10,16 @@ $textColor: #4c3d4c;
   flex-wrap: wrap;
   background-image: linear-gradient(
     to bottom right,
-    white,
-    rgb(172, 170, 170) 50%,
-    $backgroundColor 50% 85%,
-    #fafa9b
+    colors.$blueLightest,
+    colors.$blueLighter 50%,
+    colors.$background 50%,
+    colors.$backgroundLightest
   );
   span {
     width: 100%;
     text-align: center;
     margin-top: 1rem;
     font-size: 2rem;
-    color: $textColor;
+    color: colors.$midText;
   }
 }

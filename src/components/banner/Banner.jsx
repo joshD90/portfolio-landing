@@ -26,7 +26,11 @@ const Banner = React.forwardRef((props, ref) => {
                 See My Projects
               </HashLink>
             </button>
-            <button>Get In Touch</button>
+            <button>
+              <HashLink className="hashLink" smooth to="/contact#top">
+                Get In Touch
+              </HashLink>
+            </button>
           </div>
         </div>
         <div className="imgHolder">

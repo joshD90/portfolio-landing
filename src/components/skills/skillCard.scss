@@ -1,9 +1,11 @@
+@use "../colors";
+
 $textColor: #210121;
 .skillCardDiv {
   border-radius: 0.4rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: 0 0 3px 1px #cf5ecf;
+  box-shadow: 0 0 3px 1px colors.$purple;
   margin: 2rem 0;
   overflow: hidden;
   font-family: sans-serif;
@@ -49,18 +51,20 @@ $textColor: #210121;
   }
 
   .skillHeader {
-    background-color: rgba(77, 2, 77, 0.6);
+    // background-color: rgba(77, 2, 77, 0.6);
+    background-color: colors.$purpleDarkest;
     font-size: 1.5rem;
     color: white;
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 0;
+    opacity: 0.7;
   }
   .skillList {
     height: 100%;
     width: 100%;
     ul {
-      color: $textColor;
+      color: colors.$darkerText;
       list-style: none;
       padding: 10px;
       margin: 0;

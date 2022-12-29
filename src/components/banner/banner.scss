@@ -1,5 +1,40 @@
+//Yellow
+$background: #fdfdbd;
+//lighter
+$backgroundLight: #ffffef;
+$backgroundLightest: #fefece;
+//darker
+$backgroundDark: #dddda5;
+
+//blues
+$blue: #bdfdfd;
+//lighter
+$blueLightest: #efffff;
+$blueLight: #d6fefe;
+//darker
+$blueDark: #a5dddd;
+$blueDarkest: #8ebebe;
+
+//purples
+$purple: #fdbdfd;
+//lighter
+$purpleLight: #fedefe;
+$purpleLightest: #ffefff;
+//darker
+$purpleDark: #dda5dd;
+$purpleDarkest: #7f5f7f;
+//text
+$midText: #8f8f87;
+$darkText: #202018;
+$darkerText: #3f3f2f;
+$lightText: #fefee6;
+
 .bannerContainer {
-  background-image: linear-gradient(#ffff00 40%, #fafa71 80%, white 99%);
+  background-image: linear-gradient(
+    $background 40%,
+    $backgroundLightest 80%,
+    white 99%
+  );
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -12,7 +47,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: gray;
+  color: $midText;
   font-family: sans-serif;
   height: 100%;
   margin-left: 10%;
@@ -24,6 +59,7 @@
   h2 {
     margin: 0.2rem 0;
     font-size: 2rem;
+    color: $darkerText;
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
@@ -31,28 +67,37 @@
   p {
     margin-top: 2rem;
     margin-bottom: -1rem;
-    color: rgb(101, 100, 100);
+    color: $midText;
     font-weight: 600;
   }
   button {
     margin: 4rem 1rem 1rem 0;
-    width: 10rem;
+    min-width: 10rem;
     height: 4rem;
-    border: 1px solid gray;
-    padding: 0.5rem;
+    border: 1px solid $midText;
+    // padding: 0.5rem;
     border-radius: 3px;
     cursor: pointer;
     font-size: 1.2rem;
-    opacity: 0.8;
-    background-color: lightgray;
+    opacity: 0.9;
+    background-color: $blueLight;
+    font-weight: 600;
     &:hover {
-      background-color: white;
+      background-color: $blueLightest;
     }
     @media (max-width: 780px) {
       width: 7rem;
+      font-weight: normal;
     }
+    @media (max-width: 480px) {
+      width: 5rem;
+      font-size: 1rem;
+      padding: 0.3rem;
+      height: 3rem;
+    }
+
     .hashLink {
-      color: black;
+      color: $darkerText;
       text-decoration: none;
     }
   }

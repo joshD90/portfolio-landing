@@ -1,9 +1,40 @@
+//Yellow
+$background: #fdfdbd;
+//lighter
+$backgroundLight: #ffffef;
+$backgroundLightest: #fefece;
+//darker
+$backgroundDark: #dddda5;
+
+//blues
+$blue: #bdfdfd;
+//lighter
+$blueLightest: #efffff;
+$blueLight: #d6fefe;
+//darker
+$blueDark: #a5dddd;
+$blueDarkest: #8ebebe;
+
+//purples
+$purple: #fdbdfd;
+//lighter
+$purpleLight: #fedefe;
+$purpleLightest: #ffefff;
+//darker
+$purpleDark: #dda5dd;
+$purpleDarkest: #7f387f;
+//text
+$midText: #8f8f87;
+$darkText: #202018;
+$darkerText: #3f3f2f;
+$lightText: #fefee6;
+
 $lightPurple: #cf5ecf;
 $darkPurple: #210121;
 .footerContainer {
   width: 100vw;
   height: 4rem;
-  background-image: linear-gradient($lightPurple, $darkPurple);
+  background-image: linear-gradient($purple, $purpleDarkest);
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,10 +1,11 @@
+@use "../colors";
 $textColor: #4c3d4c;
 
 .container {
   color: $textColor;
-  background-color: white;
+  background-color: colors.$blueLighter;
   border-radius: 5px;
-  box-shadow: 0 0 3px 1px #cf5ecf;
+  box-shadow: 0 0 3px 1px colors.$purple;
   width: 25rem;
   height: 30rem;
   margin-bottom: 3rem;
@@ -21,9 +22,11 @@ $textColor: #4c3d4c;
   }
   .descContainer {
     padding: 10px;
+    color: colors.$midText;
     h3 {
       font-weight: 600;
       text-align: center;
+      color: colors.$darkerText;
     }
     p {
       font-style: italic;
@@ -38,12 +41,14 @@ $textColor: #4c3d4c;
       align-items: center;
       margin-left: auto;
       margin-right: auto;
-      background-image: linear-gradient(#bd17bd, #c651c6);
+      background-image: linear-gradient(colors.$purpleDark, colors.$purple);
+      filter: saturate(1.5);
+
       &:hover {
-        background-image: linear-gradient(#d62ad6, #c862c8);
+        filter: saturate(2.5);
       }
       a {
-        color: white;
+        color: colors.$darkerText;
         font-size: 1.2rem;
         font-weight: 600;
       }

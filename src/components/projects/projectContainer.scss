@@ -1,3 +1,4 @@
+@use "../colors";
 $backgroundColor: #ffff00;
 $textColor: #4c3d4c;
 .projectContainer {
@@ -5,7 +6,11 @@ $textColor: #4c3d4c;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  background-image: linear-gradient(white, #f8f870 70%, $backgroundColor);
+  background-image: linear-gradient(
+    colors.$backgroundLightest,
+    colors.$backgroundLight 70%,
+    colors.$background
+  );
   min-height: 200px;
   font-family: sans-serif;
   flex-wrap: wrap;
@@ -15,6 +20,6 @@ $textColor: #4c3d4c;
     text-align: center;
     margin: 1rem 0 2rem 0;
     font-size: 2rem;
-    color: $textColor;
+    color: colors.$midText;
   }
 }

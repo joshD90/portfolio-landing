@@ -1,3 +1,34 @@
+//Yellow
+$background: #fdfdbd;
+//lighter
+$backgroundLight: #ffffef;
+$backgroundLightest: #fefece;
+//darker
+$backgroundDark: #dddda5;
+
+//blues
+$blue: #bdfdfd;
+//lighter
+$blueLightest: #efffff;
+$blueLight: #d6fefe;
+//darker
+$blueDark: #a5dddd;
+$blueDarkest: #8ebebe;
+
+//purples
+$purple: #fdbdfd;
+//lighter
+$purpleLight: #fedefe;
+$purpleLightest: #ffefff;
+//darker
+$purpleDark: #dda5dd;
+$purpleDarkest: #7f387f;
+//text
+$midText: #8f8f87;
+$darkText: #202018;
+$darkerText: #3f3f2f;
+$lightText: #fefee6;
+
 $lightPurple: #cf5ecf;
 $darkPurple: #210121;
 
@@ -8,7 +39,7 @@ $darkPurple: #210121;
   height: 3rem;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient($darkPurple, $lightPurple);
+  background-image: linear-gradient($purpleDarkest, $purple);
   color: white;
   z-index: 3;
   transition: opacity 0.5s;
@@ -62,7 +93,8 @@ $darkPurple: #210121;
         align-items: center;
         width: 100%;
         &:hover {
-          background-image: linear-gradient(#a902a9, #d387d3);
+          background-image: linear-gradient($purple, $purpleLight);
+          color: $darkerText;
         }
         @media (max-width: 630px) {
           color: gray;
@@ -93,7 +125,7 @@ $darkPurple: #210121;
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: wrap;
-        background-image: linear-gradient($lightPurple, $darkPurple);
+        background-image: linear-gradient($purple, $purpleDarkest);
         position: absolute;
         top: 3rem;
         left: 0;

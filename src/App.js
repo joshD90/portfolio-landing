@@ -3,6 +3,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
+import DummyElement from "./DummyElement.jsx";
 
 import {
   BrowserRouter as Router,
@@ -29,9 +30,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/projects/:name" element={<ExpandProj />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/owner/:name" element={<DummyElement />} />
       </Routes>
       <Footer />
     </Router>

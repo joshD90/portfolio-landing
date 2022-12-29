@@ -55,11 +55,6 @@ const Navbar = ({ refs }) => {
     setTimeout(() => setItemsHeight("100%"), 200);
     setTimeout(() => setItemsOverflow("visible"), 500);
   };
-  const doScroll = (e) => {
-    setTimeout(() => {
-      refs[e.target.id].current.scrollIntoView({ behaviour: "smooth" });
-    }, 1);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -144,9 +139,18 @@ const Navbar = ({ refs }) => {
             >
               Projects
             </HashLink>
-            <a id="contact" onClick={doScroll}>
+            <HashLink
+              className="hashLink"
+              smooth
+              to="/contact#top"
+              onClick={() => {
+                if (dropped === true) {
+                  hideDropped();
+                }
+              }}
+            >
               Contact
-            </a>
+            </HashLink>
           </div>
         </div>
         <div className="navItem">

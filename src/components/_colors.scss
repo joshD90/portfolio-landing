@@ -10,8 +10,9 @@ $backgroundDark: #dddda5;
 //blues
 $blue: #bdfdfd;
 //lighter
-$blueLightest: #efffff;
+$blueLighter: #efffff;
 $blueLight: #d6fefe;
+$blueLightest: #f7ffff;
 //darker
 $blueDark: #a5dddd;
 $blueDarkest: #8ebebe;
@@ -29,28 +30,3 @@ $midText: #8f8f87;
 $darkText: #202018;
 $darkerText: #3f3f2f;
 $lightText: #fefee6;
-
-$textColor: rgb(66, 65, 65);
-
-.aboutContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $backgroundLightest;
-  color: $darkerText;
-  font-family: sans-serif;
-  p {
-    width: 40%;
-    text-align: center;
-    line-height: 2rem;
-    color: $textColor;
-    margin-top: 3rem;
-    @media (max-width: 768px) {
-      width: 70%;
-    }
-    @media (max-width: 480px) {
-      width: 90%;
-    }
-  }
-}
